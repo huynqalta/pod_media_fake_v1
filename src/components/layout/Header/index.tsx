@@ -105,17 +105,6 @@ const HeaderComponent = (props) => {
       className='headerComponent d-flex '
       style={{ position: 'fixed',zIndex:1, width: '100%' }}
     >
-      {/* <div className={`logo w-100  ${toogleSider && 'collapsed'}`}>
-        <img className='' src={logo} alt='' />
-        <span>
-          {React.createElement(toogleSider ?  MenuOutlined:  CloseOutlined, {
-            className: 'trigger icon-custom',
-            key: 'iconToogle',
-            onClick: toggle,
-          })}
-        </span>
-            </div> */}
-            {/* <button onClick={() => expiredToken()}>Expired Token</button> */}
             <div className='d-flex mr-4 justify-content-end w-100'>
                 <Dropdown
                     trigger={['click']}

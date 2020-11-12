@@ -11,7 +11,6 @@ import { useDispatch } from "react-redux";
 import { LoginTranslateKey } from "@shared/TranslateKey/ImportTranslateKey";
 import MenuLanguage from "@modules/Auth/component/Language";
 import { ACCESS_JWTTOKEN } from "@helper/variable";
-import { useHistory } from "react-router";
 
 const Login = props => {
   const { execute, loading } = useApi({ showSuccess: true, _useDispatch: true, useLoading: true });
@@ -29,6 +28,7 @@ const Login = props => {
     console.log(token)
       if(token){
         checkToken()
+        
       }
       return () => {
         
@@ -40,6 +40,7 @@ const Login = props => {
       password: value.password.trim(),
       userName: value.userName.trim(),
     };
+
     execute(loginCMS(raw)).then(res => {
       if (res) {
         setTokenAxios(res.data.token);

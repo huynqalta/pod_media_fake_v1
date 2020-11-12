@@ -56,34 +56,7 @@ const Question = (props) => {
 
   return (
     <>
-      <Card>
-        <div className="d-flex justify-content-end mb-4">
-          <ButtonComponent
-            text={ADD}
-            iconAnt={<PlusOutlined />}
-            onClick={handleOpenModal}
-          />
-        </div>
-        <TableComponent_New
-            ref={tableRef}
-            key="tableDevice"
-            rowKey={"sessionId"}
-            columns={columns}
-            propsCustom={{
-                showSTTCollumn:true,
-                paramsAxiosApi: getQuestion,
-                paginationServer: true,
-            }}
-        />
-        <ModalSession
-          visible={showModal.modal}
-          data={showModal.data}
-          translate={tranSlateKey}
-          onCancel={() => setShowModal({ data: null, modal: false })}
-          tableRef={tableRef}
-          language={language}
-        />
-      </Card>
+      <h1>Day la Question</h1>
     </>
   );
 };

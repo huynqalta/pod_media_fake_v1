@@ -182,29 +182,7 @@ const Customers = (props) => {
 
     return (
         <>
-            {/* <Card>
-                <div className='d-flex justify-content-end mb-4'>
-                    <ButtonComponent
-                        text={BTN_ADD}
-                        iconAnt={<PlusOutlined/>}
-                        onClick={handleOpenModal}
-                    />
-                </div>
-                <Table
-                    columns={columns}
-                    dataSource={res.data}
-                    rowKey={'customerID'}
-                    loading={loading}
-                    pagination={pagination}
-                    onChange={handleChangeTable}
-                />
-                <ModalAddCustomer
-                    visible={showModal.modal}
-                    closeModal={handleCloseModal}
-                    dataEdit={showModal.data}
-                />
-            </Card> */}
-            <h1>Đây là Customers</h1>
+            <h1>Customers</h1>
         </>
     );
 };

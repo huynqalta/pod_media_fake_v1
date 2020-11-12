@@ -16,9 +16,7 @@ const DetailDevice = (props: Props) => {
 
   return (
     <>
-      <Card title={<InforDevice deviceId={deviceId} language={language} />}>
-        <ListLogDevice deviceId={deviceId} />
-      </Card>
+      <h1>Day laf DetailDevice</h1>
     </>
   );
 };

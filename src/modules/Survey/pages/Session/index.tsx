@@ -64,61 +64,7 @@ const Session = (props) => {
 
     return (
         <>
-            <Card>
-                <div className="d-flex justify-content-end mb-4">
-                    <ButtonComponent
-                        text={ADD}
-                        iconAnt={<PlusOutlined/>}
-                        onClick={handleOpenModal}
-                    />
-                </div>
-                {/* <TableComponent
-                    ref={tableRef}
-                    key="tableDevice"
-                    rowKey={"sessionId"}
-                    title={() => (
-                        <></>
-                        //   <div className="d-flex justify-content-end">
-                        //     <ButtonComponent
-                        //       onClick={() => setOperatorModal(prev => ({ ...prev, visible: true }))}
-                        //       text={ADD_DEVICE}
-                        //       iconAnt={<FontAwesomeIcon className="mr-2" icon={faPlus} />}
-                        //     />
-                        //   </div>
-                    )}
-                    columns={columns}
-                    propsCustom={{
-                        paramsAxiosApi: getSession,
-                        paginationServer: true,
-                    }}
-                /> */}
-                 <TableComponent_New
-                    ref={tableRef}
-                    key="tableDevice"
-                    rowKey={"sessionId"}
-                    columns={columns}
-                    propsCustom={{
-                        showSTTCollumn:true,
-                        paramsAxiosApi: getSession,
-                        paginationServer: true,
-                    }}
-                />
-                <ModalSession
-                    visible={showModal.modal}
-                    data={showModal.data}
-                    translate={tranSlateKey}
-                    onCancel={() => setShowModal({data: null, modal: false, modalAssign: false})}
-                    tableRef={tableRef}
-                />
-
-                <ModalAssignSession
-                    translate={tranSlateKey}
-                    visible={showModal.modalAssign}
-                    onCancel={() => setShowModal({data: null, modal: false, modalAssign: false})}
-                    tableRef={tableRef}
-                    data={showModal.data}
-                />
-            </Card>
+           <h1>Day la sestion</h1>
         </>
     );
 };

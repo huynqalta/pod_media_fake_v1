@@ -23,8 +23,6 @@ import {
   DEVICE_DASHBOARD, EDIT_ADD, DEVICE_MAP,
 } from "./router-paths";
 import ChangePassword from "@modules/Auth/ChangePassword";
-
-
 const UserPage = Loadable({
   loader: () => import("./User"),
   loading: LoadingComponent,
@@ -109,15 +107,6 @@ const DeviceDashboard = Loadable({
   loader: () => import("./Dashboard/pages/DeviceDashboard"),
   loading: LoadingComponent,
 });
-// const DetailCustomersPage = Loadable({
-//     loader: () => import("./Customers/component/DetailCustomer/index"),
-//     loading: LoadingComponent,
-// });
-// const DetailCustomersPage = Loadable({
-//     loader: () => import("./Customers/component/DetailCustomer/index"),
-//     loading: LoadingComponent,
-// });
-
 export const router: Array<object> = [
 
   {
