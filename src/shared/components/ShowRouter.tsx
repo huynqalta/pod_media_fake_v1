@@ -1,7 +1,8 @@
-import React from 'react'
-import {Route,Switch} from 'react-router-dom';
-const ShowRouter=({routers})=> {
-    const result=routers.map((router:any,index:number)=>{
+import React from 'react';
+import {Route, Switch} from 'react-router-dom';
+
+const ShowRouter = ({routers}) => {
+    const result = routers.map((router: any, index: number) => {
         return (
             <Route
                 key={router.path}
@@ -11,6 +12,8 @@ const ShowRouter=({routers})=> {
             />
         );
     });
-return <Switch>{result}</Switch>
+
+    return <Switch>{result}</Switch>;
 };
+
 export default ShowRouter;

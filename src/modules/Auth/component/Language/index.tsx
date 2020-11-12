@@ -1,32 +1,38 @@
-import React from 'react'
-import {Dropdown,Menu} from 'antd';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import React, {useContext} from "react";
+import {Dropdown, Menu} from "antd";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLanguage} from "@fortawesome/free-solid-svg-icons";
+import {LanguageContext} from "@shared/Context/Language";
 
-const MenuLanguage=()=> {
-    const menuLang=(
+const MenuLanguage = () => {
+    const {language, setLanguage} = useContext(LanguageContext);
+
+    const menuLang = (
         <Menu>
             <Menu.Item>
-                <a className={'USE'}>English</a>
+                <a className={language == "USA" && "active"} onClick={() => setLanguage("USA")}>
+                    English
+                </a>
             </Menu.Item>
             <Menu.Item>
-                <a className={'VMN'}>Việt Nam</a>
+                <a className={language == "VNM" && "active"} onClick={() => setLanguage("VNM")}>
+                    Việt Nam
+                </a>
             </Menu.Item>
         </Menu>
-        
     );
-    return (
+
+    return(
         <>
             <Dropdown trigger={["click"]} overlay={menuLang} placement="bottomCenter" arrow>
                 <a>
                     {" "}
-                    <FontAwesomeIcon color="#2581BC" style={
-                        {fontSize:"2rem",cursor:"pointer"}
-                    } icon={faLanguage}/>
+                    <FontAwesomeIcon color="#2581BC" style={{fontSize: "2rem", cursor: "pointer"}}
+                                     icon={faLanguage}/>
                 </a>
             </Dropdown>
         </>
     )
-}
+};
 
 export default MenuLanguage
